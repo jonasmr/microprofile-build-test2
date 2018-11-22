@@ -3,7 +3,7 @@
 #if MICROPROFILE_ENABLED
 
 
-this should not compile
+//this should not compile
 
 #include <thread>
 #include <mutex>
