@@ -3,5 +3,5 @@ os:
   - osx
   - windows
 language: cpp
-script: ./travis/build.sh
+script: ./travis/build
 
