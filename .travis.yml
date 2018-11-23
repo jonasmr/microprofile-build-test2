@@ -3,9 +3,4 @@ os:
   - osx
   - windows
 language: cpp
-script: 
-  - if [ $TRAVIS_OS_NAME = "linux" ]; then ./travis/build; fi
-  - if [ $TRAVIS_OS_NAME = "osx" ]; then ./travis/build; fi
-  - if [ $TRAVIS_OS_NAME = "windows ]; then ./travis/build.cmd; fi
-
-
+script: ./travis/build
