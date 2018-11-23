@@ -1,5 +1,6 @@
 #!/bin/bash
-if [ $TRAVIS_OS_NAME = "windows"]; then
+echo "hellow"
+if [ "$TRAVIS_OS_NAME" = "windows"]; then
 	echo "hello world"
 else
 	set -ev
