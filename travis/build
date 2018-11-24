@@ -1,7 +1,8 @@
 #!/bin/bash
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
-	vcvars32.bat
+	set
+	"%vs140comntools%\vcvars32.bat"
 	echo "hello world"
 else
 	set -ev
