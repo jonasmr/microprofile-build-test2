@@ -2,7 +2,8 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	cd \
+	c:
+	cd \\
 	dir /S vcvars64.bat
 else
 	set -ev
