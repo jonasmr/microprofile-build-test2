@@ -3,19 +3,14 @@ echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
 	echo on
-	echo "$VS140COMNTOOLS" 
-	dir "$VS140COMNTOOLS"
-	
-	echo ".. "
-	echo dir "$VS140COMNTOOLS\\.."
-	dir "$VS140COMNTOOLS\\.."
-	echo dir "$VS140COMNTOOLS\\..\\.."
-	dir "$VS140COMNTOOLS\\..\\.."
-	echo "....."
-	dir "$VS140COMNTOOLS\\..\\..\\VC\\"
-	echo dir "$VS140COMNTOOLS\\..\\..\\VC\\vcvarsall.bat"
-	dir "$VS140COMNTOOLS\\..\\..\\VC\\vcvarsall.bat"
-	"$VS140COMNTOOLS\\..\\..\\VC\\vcvarsall.bat" x64
+	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\"
+	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\"
+	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
+	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
+
+
+	pwd
+	"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat" x64
 	msbuild /?
 else
 	set -ev
