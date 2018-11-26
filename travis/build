@@ -2,8 +2,14 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	"%vs140comntools%\vcvars32.bat"
+	dir "%vs140comntools%"
+	echo ".. "
+	dir "%vs140comntools%"/..
+	echo "....."
+	dir "%vs140comntools%"\..\..
+
 	echo "hello world"
+	msbuild /?
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
