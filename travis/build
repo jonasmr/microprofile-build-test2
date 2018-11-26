@@ -13,7 +13,8 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	c:
 	pwd
 	dir 
-	msbuild /?
+	MSBuild.exe
+	dir MSBuild.exe
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
