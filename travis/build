@@ -1,20 +1,9 @@
 #!/bin/bash
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
-	echo dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\"
-	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\"
-	echo dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\"
-	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\"
-	echo dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0"
-	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0"
-	echo dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin"
-	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin"
-	cd "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\"
-	c:
-	pwd
-	dir 
-	MSBuild.exe
-	dir MSBuild.exe
+	export PATH=c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\:$PATH
+	MSBuild
+	"c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\MSBuild.exe"
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
