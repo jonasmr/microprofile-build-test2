@@ -2,11 +2,12 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	dir "%vs140comntools%"
+	echo %VS140COMNTOOLS%
+	dir %VS140COMNTOOLS%
 	echo ".. "
-	dir "%vs140comntools%"/..
+	dir "%VS140COMNTOOLS%"/..
 	echo "....."
-	dir "%vs140comntools%"\..\..
+	dir %VS140COMNTOOLS%\..\..
 
 	echo "hello world"
 	msbuild /?
