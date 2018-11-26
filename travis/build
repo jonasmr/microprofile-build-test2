@@ -12,8 +12,8 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	echo dir "$VS140COMNTOOLS\\..\\.."
 	dir "$VS140COMNTOOLS\\..\\.."
 	echo "....."
-	dir "$VS140COMNTOOLS\\..\\VC\\"
-	call "$VS140COMNTOOLS\\..\\VC\\vcvarsall.bat"
+	dir "$VS140COMNTOOLS\\..\\..\\VC\\"
+	call "$VS140COMNTOOLS\\..\\..\\VC\\vcvarsall.bat"
 	msbuild /?
 else
 	set -ev
