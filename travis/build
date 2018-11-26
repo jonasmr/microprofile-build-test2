@@ -2,7 +2,7 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	dir "c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Tools\"
+	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Tools\\"
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
