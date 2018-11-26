@@ -2,9 +2,7 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	c:
-	cd \\
-	dir /S vcvars64.bat
+	ls c:\\ -R | grep vcvars
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
