@@ -2,20 +2,8 @@
 echo "hellow"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	set
-	echo on
-	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\"
-	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\"
-	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
-	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
-
-	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\"
-	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\"
-	echo dir "C:\\Program Files (x86)\\"
-	dir "C:\\Program Files (x86)\\"
-
-	pwd
-	"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat" x64
-	msbuild /?
+	cd \
+	dir /S vcvars64.bat
 else
 	set -ev
 	pushd demo/noui && make clean && make && popd
