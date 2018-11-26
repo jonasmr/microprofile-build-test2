@@ -8,6 +8,10 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
 	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\"
 
+	echo dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\"
+	dir "C:\\Program Files (x86)\\Microsoft Visual Studio\\
+	echo dir "C:\\Program Files (x86)\\"
+	dir "C:\\Program Files (x86)\\"
 
 	pwd
 	"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat" x64
