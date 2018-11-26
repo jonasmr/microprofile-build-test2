@@ -10,7 +10,9 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	echo dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin"
 	dir "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin"
 	cd "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\"
-	dir "ms*"
+	c:
+	pwd
+	dir 
 	msbuild /?
 else
 	set -ev
