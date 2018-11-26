@@ -5,8 +5,12 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	echo on
 	echo "$VS140COMNTOOLS" 
 	dir "$VS140COMNTOOLS"
+	
 	echo ".. "
+	echo dir "$VS140COMNTOOLS\\.."
 	dir "$VS140COMNTOOLS\\.."
+	echo dir "$VS140COMNTOOLS\\..\\.."
+	dir "$VS140COMNTOOLS\\..\\.."
 	echo "....."
 	dir "$VS140COMNTOOLS\..\\VC\\"
 	msbuild /?
