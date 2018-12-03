@@ -2,8 +2,11 @@ os:
   - linux
   - osx
   - windows
-env:
-  - TARGET=noui
-  - TARGET=noui_c
+matrix:
+  include:
+    - name : "noui"
+      env : TARGET=noui
+    - name : "noui_c"
+      env : TARGET=noui_c
 language: cpp
 script: ./travis/build
