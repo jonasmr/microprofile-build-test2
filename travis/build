@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ev
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	export PATH="c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\":$PATH
 	pushd demo\\$TARGET\\ && MSBuild.exe /property:Configuration="Release";Platform="x64" && popd
