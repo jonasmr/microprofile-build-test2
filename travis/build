@@ -3,13 +3,16 @@ echo "hellow"
 echo "$TARGET"
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	export PATH="c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\":$PATH
+	echo pushd demo/$TARGET
+	cd
 	pushd demo/$TARGET
+	cd
 	MSBuild.exe /property:Configuration="Release";Platform="x64"
 	MSBuild.exe /property:Configuration="Debug";Platform="x64"
 	popd
 else
 	echo $TARGET
-	pushd demo/$Target
+	pushd demo/$TARGET
 	pwd
 	make clean 
 	make 

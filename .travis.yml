@@ -5,7 +5,7 @@ os:
 env:
   - TARGET=noui
   - TARGET=noui_c
-  - TARGET=noframes
+  #- TARGET=noframes
 matrix:
   exclude:
     - os: osx
