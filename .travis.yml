@@ -10,5 +10,7 @@ matrix:
   exclude:
     - os: windows
       env: TARGET=noui_c
+    - os: windows
+      env: TARGET=nouiframes
 language: cpp
 script: ./travis/build
