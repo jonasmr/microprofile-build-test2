@@ -5,10 +5,10 @@ os:
 env:
   - TARGET=noui
   - TARGET=noui_c
-  #- TARGET=noframes
+  - TARGET=noframes
 matrix:
   exclude:
-    - os: osx
-      env: TARGET=noui
+    - os: windows
+      env: TARGET=noui_c
 language: cpp
 script: ./travis/build
