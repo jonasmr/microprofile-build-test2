@@ -3,12 +3,12 @@ os:
   - osx
   - windows
 env:
-  - Target = noui
-  - Target = noui_c
-  - Target = noframes
+  - TARGET=noui
+  - TARGET=noui_c
+  - TARGET=noframes
 matrix:
   exclude:
     - os: osx
-      env: Target = noui
+      env: TARGET=noui
 language: cpp
 script: ./travis/build
