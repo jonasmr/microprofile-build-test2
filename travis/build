@@ -4,10 +4,7 @@ echo "$TARGET"
 pwd
 if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	export PATH="c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\":$PATH
-	pushd demo\\$TARGET\\
-	MSBuild.exe /property:Configuration="Release";Platform="x64"
-	MSBuild.exe /property:Configuration="Debug";Platform="x64"
-	popd
+	pushd demo\\$TARGET\\ && MSBuild.exe /property:Configuration="Release";Platform="x64" && popd
 else
 	pushd demo/$TARGET
 	make clean 
