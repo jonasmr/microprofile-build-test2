@@ -2,11 +2,13 @@ os:
   - linux
   - osx
   - windows
+env:
+  - Target = noui
+  - Target = noui_c
+  - Target = noframes
 matrix:
-  include:
-    - name : "noui"
-      env : TARGET=noui
-    - name : "noui_c"
-      env : TARGET=noui_c
+  exclude:
+    - os: osx
+      env: Target=noui
 language: cpp
 script: ./travis/build
