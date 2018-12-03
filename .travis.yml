@@ -11,6 +11,6 @@ matrix:
     - os: windows
       env: TARGET=noui_c
     - os: windows
-      env: TARGET=nouiframes
+      env: TARGET=noframes
 language: cpp
 script: ./travis/build
