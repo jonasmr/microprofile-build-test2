@@ -35,8 +35,6 @@
 #define MP_LOG_ENTER 0x1
 #define MP_LOG_LEAVE 0x0
 #define MP_LOG_PAYLOAD 0x2
-#ifdef _WIN32
-
 
 adsd
 
@@ -46,7 +44,6 @@ s
 s
 s
 
-#endif
 
 static_assert(0 == (MICROPROFILE_MAX_GROUPS%32), "MICROPROFILE_MAX_GROUPS must be divisible by 32");
 
