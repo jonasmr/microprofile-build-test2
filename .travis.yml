@@ -9,6 +9,6 @@ env:
 matrix:
   exclude:
     - os: osx
-      env: Target=noui
+      env: Target = noui
 language: cpp
 script: ./travis/build
