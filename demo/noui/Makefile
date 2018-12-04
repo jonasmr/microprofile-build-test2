@@ -6,7 +6,7 @@ CFLAGS+=-g -O0 -Wno-invalid-offsetof -Wall -Werror
 #CFLAGS+=-DMICROPROFILE_ENABLED=0
 CPPFLAGS=$(CFLAGS)
 
-CFLAGS+=std=c99
+CFLAGS+=-std=c99
 
 CPPFLAGS+=-std=c++11
 
