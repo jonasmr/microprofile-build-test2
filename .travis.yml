@@ -2,6 +2,9 @@ os:
   - linux
   - osx
   - windows
+compiler:
+  - gcc
+  - clang
 env:
   - TARGET=noui
   - TARGET=noui_c
@@ -9,6 +12,8 @@ env:
   #- TARGET=noui_gl
 matrix:
   exclude:
+    - os: windows
+      compiler: clang
     - os: windows
       env: TARGET=noui_c
     - os: windows
