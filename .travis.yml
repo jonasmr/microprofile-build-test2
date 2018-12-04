@@ -1,14 +1,11 @@
 os:
-  #- linux
-  #- osx
+  - linux
+  - osx
   - windows
 env:
   - TARGET=noui
   - TARGET=noui_c
   - TARGET=noframes
-  - TARGET=demo_d3d11
-  - TARGET=demo_d3d12
-  - TARGET=demo_d3d12_multithreading
 matrix:
   exclude:
     - os: windows
