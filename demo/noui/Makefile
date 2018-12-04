@@ -3,9 +3,11 @@ CFLAGS=-Wno-c++11-extensions -I../..
 #CFLAGS+=-fsanitize=undefined-trap -fsanitize-undefined-trap-on-error
 CFLAGS+=-Wall -DMICROPROFILE_UI=0 -DMICROPROFILE_WEBSERVER=1 -DMICROPROFILE_GPU_TIMERS=0
 CFLAGS+=-g -O0 -Wno-invalid-offsetof -Wall -Werror
-
 #CFLAGS+=-DMICROPROFILE_ENABLED=0
 CPPFLAGS=$(CFLAGS)
+
+CFLAGS+=std=c99
+
 CPPFLAGS+=-std=c++11
 
 
