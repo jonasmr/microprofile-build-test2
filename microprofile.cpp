@@ -36,14 +36,6 @@
 #define MP_LOG_LEAVE 0x0
 #define MP_LOG_PAYLOAD 0x2
 
-adsd
-
-s
-s
-s
-s
-s
-
 
 static_assert(0 == (MICROPROFILE_MAX_GROUPS%32), "MICROPROFILE_MAX_GROUPS must be divisible by 32");
 

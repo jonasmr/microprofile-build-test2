@@ -1,16 +1,26 @@
 os:
-  - linux
-  - osx
+  #- linux
+  #- osx
   - windows
 env:
   - TARGET=noui
   - TARGET=noui_c
   - TARGET=noframes
+  - TARGET=demo_d3d11
+  - TARGET=demo_d3d12
+  - TARGET=demo_d3d12_multithreading
 matrix:
   exclude:
     - os: windows
       env: TARGET=noui_c
     - os: windows
       env: TARGET=noframes
+  include:
+    - os: windows
+      env: TARGET=demo_d3d11
+    - os: windows
+      env: TARGET=demo_d3d12
+    - os: windows
+      env: TARGET=demo_d3d12_multithreading
 language: cpp
 script: ./travis/build
