@@ -14,10 +14,10 @@ matrix:
       env: TARGET=noframes
   include:
     - os: windows
-      env: TARGET=demo_d3d11
+      env: TARGET=noui_d3d11
     - os: windows
-      env: TARGET=demo_d3d12
+      env: TARGET=noui_d3d12
     - os: windows
-      env: TARGET=demo_d3d12_multithreading
+      env: TARGET=noui_d3d12_multithreading
 language: cpp
 script: ./travis/build
