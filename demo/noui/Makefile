@@ -6,7 +6,7 @@ CFLAGS+=-g -O0 -Wno-invalid-offsetof -Wall -Werror
 
 #CFLAGS+=-DMICROPROFILE_ENABLED=0
 CPPFLAGS=$(CFLAGS)
-CPPFLAGS+=-stdlib=libc++ -std=c++11
+CPPFLAGS+=-std=c++11
 
 
 CPP_SOURCES = fakework.cpp demo_noui.cpp ../../microprofile.cpp
