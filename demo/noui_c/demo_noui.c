@@ -24,7 +24,16 @@
 
 #ifndef _WIN32
 #include <unistd.h>
-int usleep(useconds_t usec);
+#include <time.h>
+#include <string.h>
+#define usleep myusleep
+void myusleep(uint32_t nUs)
+{
+	struct timespec time;
+	memset(&time, 0, sizeof(time));
+	time.tv_nsec = nUs * 1000;
+	nanosleep(&time, NULL);
+}
 #endif
 
 #include "microprofile.h"
