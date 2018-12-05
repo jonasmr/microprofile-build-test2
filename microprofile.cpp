@@ -2424,20 +2424,20 @@ void MicroProfileFlip(void* pContext)
 		}
 
 		uint32_t* pTimerToGroup = &S.TimerToGroup[0];
-		uint32_t nPutStart[MICROPROFILE_MAX_THREADS];
+		// uint32_t nPutStart[MICROPROFILE_MAX_THREADS];
 		for(uint32_t i = 0; i < MICROPROFILE_MAX_THREADS; ++i)
 		{
 			MicroProfileThreadLog* pLog = S.Pool[i];
 			if(!pLog)
 			{
 				pFramePut->nLogStart[i] = 0;
-				nPutStart[i] = (uint32_t)-1;
+				// nPutStart[i] = (uint32_t)-1;
 			}
 			else
 			{
 				uint32_t nPut = pLog->nPut.load(std::memory_order_acquire);
 				pFramePut->nLogStart[i] = nPut;
-				nPutStart[i] = nPut;
+				// nPutStart[i] = nPut;
 			}
 		}
 		{
