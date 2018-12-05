@@ -34,8 +34,6 @@ $(TARGET): $(C_OBJS) $(CPP_OBJS)
   ../../microprofile_html.h
 
 .cpp.o: 
-	echo "CXX IS" $(CXX)
-	echo "CC IS" $(CC)
 	$(CXX) -c $< $(CPPFLAGS) -o $@
 
 .c.o:
