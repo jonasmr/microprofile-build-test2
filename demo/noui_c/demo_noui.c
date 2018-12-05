@@ -27,7 +27,7 @@
 #include <time.h>
 #include <string.h>
 #define usleep myusleep
-void myusleep(uint32_t nUs)
+void myusleep(int nUs)
 {
 	struct timespec time;
 	memset(&time, 0, sizeof(time));
