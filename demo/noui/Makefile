@@ -4,12 +4,10 @@ FLAGS=-I../..
 FLAGS+=-Wall -DMICROPROFILE_UI=0 -DMICROPROFILE_WEBSERVER=1 -DMICROPROFILE_GPU_TIMERS=0
 FLAGS+=-g -O0 -Wno-invalid-offsetof -Wall -Werror
 #FLAGS+=-DMICROPROFILE_ENABLED=0
-CPPFLAGS= $(FLAGS)
 
-CFLAGS = $(FLAGS)
-CFLAGS+=-std=c99 
+CPPFLAGS= $(FLAGS) -std=c++11
+CFLAGS = $(FLAGS) -std=c99 
 
-CPPFLAGS+=-std=c++11
 
 
 CPP_SOURCES = fakework.cpp demo_noui.cpp ../../microprofile.cpp
