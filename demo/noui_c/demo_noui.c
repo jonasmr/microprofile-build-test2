@@ -24,6 +24,7 @@
 
 #ifndef _WIN32
 #include <unistd.h>
+int usleep(useconds_t usec);
 #endif
 
 #include "microprofile.h"
