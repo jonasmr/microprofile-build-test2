@@ -5,7 +5,7 @@ FLAGS+=-Wall -DMICROPROFILE_UI=0 -DMICROPROFILE_WEBSERVER=1 -DMICROPROFILE_GPU_T
 FLAGS+=-g -O0 -Wno-invalid-offsetof -Wall -Werror
 
 CPPFLAGS= $(FLAGS) -std=c++11
-CFLAGS = $(FLAGS) -std=c11 
+CFLAGS = $(FLAGS) -std=c99 
 
 
 
