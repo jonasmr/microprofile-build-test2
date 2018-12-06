@@ -9,7 +9,7 @@ env:
   - TARGET=noui
   - TARGET=noui_c
   - TARGET=noframes
-  - TARGET=noui_gl
+  #- TARGET=noui_gl
 matrix:
   exclude:
     - os: windows
